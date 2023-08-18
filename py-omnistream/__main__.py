@@ -5,21 +5,10 @@ import asyncio
 import datetime
 import json
 import logging
-from typing import Any, Callable, Dict, Union
-
-import aiohttp  # type: ignore
-from aiohttp.client_exceptions import ContentTypeError, ServerTimeoutError
-from awesomeversion import AwesomeVersion
-from awesomeversion.exceptions import AwesomeVersionCompareException
+from typing import Any, Callable
 
 from .exceptions import (
     AlreadyListening,
-    AuthenticationError,
-    MissingMethod,
-    MissingSerial,
-    ParseJSONError,
-    UnknownError,
-    UnsupportedFeature,
 )
 
 from .websocket import (
